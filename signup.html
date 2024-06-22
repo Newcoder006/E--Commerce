@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - InnovateTech</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #1abc9c;
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #16a085;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+}
+
+.sign-up {
+    background-color: #1abc9c;
+    color: white;
+    padding: 8px 16px;
+}
+
+.sign-up:hover {
+    background-color: #16a085;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    font-size: 28px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        flex-grow: 0;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.signup-content {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: white;
+    padding: 50px 20px;
+}
+
+.signup-form {
+    background-color: #ecf0f1;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.signup-form h2 {
+    color: #16a085;
+}
+
+.signup-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #34495e;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+.signup-form button {
+    padding: 10px;
+    border: none;
+    background-color: #1abc9c;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.signup-form button:hover {
+    background-color: #16a085;
+}
+
+    </style>
+    
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Simple password match validation
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                event.preventDefault();
+            }
+        });
+    </script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">InnovateTech</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs1.html">About Us</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <main class="signup-content">
+        <section class="hero">
+            <h1>Join InnovateTech</h1>
+        </section>
+
+        <section class="signup-form">
+            <h2>Create Your Account</h2>
+            <form action="submit_signup.php" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8">
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required minlength="8">
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
