@@ -57,3 +57,13 @@ InnovateTech/<br/>
 ├── signup.css<br/>
 └── images/<br/>
     └── logo.png<br/>
+<br/><br/>
+Website has been added with better CSS and JS for more functionalities and pleasing look. Website has been modified to make it more responsive.<br/>
+Some of the changes made in page are:<BR/>
+-> Added more functional search bar that will run an sorting algorithm to find the desired product for you.<br/>
+-> Added homepage link on website name for easier access.<br/>
+-> Added products link in intro of website. <br/>
+<br/>
+Products has been added for users and a personal information page has been designed to collect data for delivery purposes.<br/>
+Products > description > price > buy button. The arrangement for the products page has been done in this particular format.<br/>
+Soon a payment page will be added for user to pay for the product selected.<br/>
