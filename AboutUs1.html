@@ -216,8 +216,18 @@ ul li {
     </main>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('nav ul').classList.toggle('show');
+        document.getElementById('search-button').addEventListener('click', function() {
+            let query = document.getElementById('search-input').value.toLowerCase();
+            let productRows = document.querySelectorAll('#product-table tbody tr');
+            
+            productRows.forEach(row => {
+                let productName = row.querySelector('td p').textContent.toLowerCase();
+                if (productName.includes(query)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>
