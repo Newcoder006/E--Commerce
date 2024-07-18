@@ -3,175 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - InnovateTech</title>
-    <style type="text/css">
+    <title>InnovateTech - About Us</title>
+    <style>
+        /* Add your CSS here */
         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #2c3e50;
-    padding: 10px 20px;
-    color: white;
-    flex-wrap: wrap;
-}
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+            flex-wrap: wrap;
+        }
 
-.logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-}
+        #logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-.search-bar {
-    display: flex;
-    flex-grow: 1;
-    max-width: 600px;
-    margin: 0 20px;
-}
+        #search-bar {
+            display: flex;
+            flex-grow: 1;
+            max-width: 600px;
+            margin: 0 20px;
+        }
 
-.search-bar input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-}
+        #search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
 
-.search-bar button {
-    padding: 10px;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    background-color: #1abc9c;
-    color: white;
-    cursor: pointer;
-}
+        #search-bar button {
+            padding: 10px;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            background-color: #ff9800;
+            color: white;
+            cursor: pointer;
+        }
 
-.search-bar button:hover {
-    background-color: #16a085;
-}
+        #search-bar button:hover {
+            background-color: #e68900;
+        }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
 
-nav ul li {
-    margin: 0 10px;
-}
+        nav ul li {
+            margin: 0 10px;
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
 
-nav ul li a:hover {
-    background-color: #34495e;
-}
+        nav ul li a:hover {
+            background-color: #555;
+        }
 
-.sign-up {
-    background-color: #1abc9c;
-    color: white;
-    padding: 8px 16px;
-}
+        #sign-up {
+            background-color: #ff9800;
+            color: white;
+            padding: 8px 16px;
+        }
 
-.sign-up:hover {
-    background-color: #16a085;
-}
+        #sign-up:hover {
+            background-color: #e68900;
+        }
 
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-}
+        #menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
 
-.menu-toggle span {
-    font-size: 28px;
-    color: white;
-}
+        #menu-toggle span {
+            font-size: 28px;
+            color: white;
+        }
 
-@media (max-width: 768px) {
-    .search-bar {
-        flex-grow: 0;
-        width: 100%;
-        margin: 10px 0;
-    }
+        @media (max-width: 768px) {
+            #search-bar {
+                flex-grow: 0;
+                width: 100%;
+                margin: 10px 0;
+            }
 
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-    }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
 
-    nav ul.show {
-        display: flex;
-    }
+            nav ul.show {
+                display: flex;
+            }
 
-    nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
 
-    .menu-toggle {
-        display: block;
-    }
-}
+            #menu-toggle {
+                display: block;
+            }
+        }
 
-.content {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
+        header {
+            background-color: #1abc9c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
 
-h1, h2 {
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .aboutus-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .aboutus-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .aboutus-container p {
+            margin-bottom: 20px;
+        }
+        .content {
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        }
+
+        h1, h2 {
     color: #2c3e50;
-}
+        }
 
-p, ul {
-    color: #34495e;
-    line-height: 1.6;
-}
+        p, ul {
+        color: #34495e;
+        line-height: 1.6;
+        }
 
-ul {
-    padding-left: 20px;
-}
+        ul {
+        padding-left: 20px;
+        }
 
-ul li {
-    margin-bottom: 10px;
-}
-
-</style>
+        ul li {
+        margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <a href="#">InnovateTech</a>
+    <header id="navbar">
+        <div id="logo">
+            <a href="index.html">InnovateTech</a>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button type="submit">Search</button>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button type="button" id="search-button">Search</button>
         </div>
+
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="ContactUs.html ">Contact Us</a></li>
-                <li><a href="signup.html" class="sign-up">Sign Up</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
-        <div class="menu-toggle">
+        <div id="menu-toggle">
             <span>&#9776;</span>
         </div>
     </header>
-
     <main class="content">
         <img src="studio-flat-lay-various-tech-gadgets-sleek-black-surface_1007506-5864.jpg" height="90%" width="90%" alt="Tech image">
         <h1>About Us</h1>
