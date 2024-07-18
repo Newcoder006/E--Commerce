@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateTech - Register</title>
+    <style>
+        /* Add your CSS here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        #logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #search-bar {
+            display: flex;
+            flex-grow: 1;
+            max-width: 600px;
+            margin: 0 20px;
+        }
+
+        #search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        #search-bar button {
+            padding: 10px;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            background-color: #ff9800;
+            color: white;
+            cursor: pointer;
+        }
+
+        #search-bar button:hover {
+            background-color: #e68900;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        #sign-up {
+            background-color: #ff9800;
+            color: white;
+            padding: 8px 16px;
+        }
+
+        #sign-up:hover {
+            background-color: #e68900;
+        }
+
+        #menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        #menu-toggle span {
+            font-size: 28px;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            #search-bar {
+                flex-grow: 0;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            #menu-toggle {
+                display: block;
+            }
+        }
+        header {
+            background-color: #1abc9c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .register-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .register-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .register-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .register-container button {
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .register-container button:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <header id="navbar">
+        <div id="logo">
+            <a href="index.html">InnovateTech</a>
+        </div>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button type="button" id="search-button">Search</button>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+        <div id="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form id="register-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            alert('Registration successful!');
+            // Here you can add further logic for the registration process
+        });
+    </script>
+</body>
+</html>
