@@ -48,13 +48,21 @@ File Structure<br/>
 InnovateTech/<br/>
 │<br/>
 ├── index.html<br/>
-├── about.html<br/>
-├── contact.html<br/>
-├── signup.html<br/>
+├── aboutus.html<br/>
+├── contactus.html<br/>
+├── register.html<br/>
+├── bill.html<br/>
+├── payment.html<br/>
+├── cart.html<br/>
+├── thankyou.html<br/>
 ├── styles.css<br/>
-├── about.css<br/>
-├── contact.css<br/>
-├── signup.css<br/>
+├── aboutus.css<br/>
+├── contactus.css<br/>
+├── register.css<br/>
+├── cart.css<br/>
+├── payment.css<br/>
+├── bill.css<br/>
+├── thankyou.css<br/>
 └── images/<br/>
     └── logo.png<br/>
 <br/><br/>
@@ -69,3 +77,11 @@ Products > description > price > buy button. The arrangement for the products pa
 Soon a payment page will be added for user to pay for the product selected.<br/>
 <h5>New problem encountered</h5><br/>
 Currently getting some problems related to redirecting user from a form page to another page for example: when you want to signup in the website, you click on signup formand when you click submit, it will run into an error of ERROR 405. Also when you go to buy a product you will encounter the same problem where you will find an informtion form for colleting your data for delivery purposes. After submitting this form you should be redirected to another page where it will ask for your card details to complete payment. I used AI to create me an API as I do not have any knowledge of creating APIs. So after creating API, I connected it to a HTML page designed it for accepting payments. But it is also not working. I ave tried different methods to rediect user to new webpage but all of them failed.<br/>
+Got solutions to all the problems........<br/>
+The problem for payment was solved. Didnt have to create or use any dummy API I just created new form with better functionality for mimicing the basic payment API.<br/>
+Also added a billing and thankyou page. In billing page you can see all the products you have bought and your total amount and then you will be redirected to thankyou for shopping from us page. Massive changes that I done are remaining.....<br/>
+I changed some css for better looking pages. I added a background in cart.......OH FROM 'CART' i remember in this commit a new feature cart will be addded. Until now you have to buy products seperately but guess what you can add multiple items to cart and buy them all at once.<br/>
+The login has been added and signup page is modified. Also the css for Contact Us page has been changed to match with homepage.<br/>
+All the redirecting problems are solved ay adding simple hyperlink to next page. Also got to use JSON to fetch data from different webpage.This concept was used in getting data for cart items and billing. Also I faced one problem today was that cart was not losing its items and even after closing all webpages and was neither showing the total of the products in cart. but that problem was sorted after I flushed previous data from cart array.<br/>
+These are all the things I have done till now and I might drop this project here because I have no idea of waht to do next. This is the best I can give.<br/>
+<strong>THANKYOU</strong>
